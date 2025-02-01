@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 
     <!-- styles -->
@@ -38,33 +40,46 @@
             font-weight: 400;
             font-style: normal;
         }
+          @keyframes walk {
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .animate-walk {
+            animation: walk 5s linear infinite;
+        }
     </style>
 
 <body>
     <header>
         <div class="bg-[#FFF9F4] mb-24">
             <nav
-                class="hidden md:flex container mx-auto sora-fon font-normal h-25 py-2 flex justify-between items-center">
+                class="hidden md:flex container mx-auto sora-font font-normal h-25 py-2 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <div>
-                        <img src="images/logo-header.png" alt="">
+                        <img class="p-4" src="images/logo-header.png" alt="">
                     </div>
                     <div>
-                        <h3 class="font-medium">Browse Pets</h3>
+                        <h3 class="font-medium sora-font hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white">Browse Pets</h3>
                     </div>
                 </div>
                 <div>
                     <ol class="flex gap-4">
-                        <li>Find a pet</li>
-                        <li>Breeds</li>
-                        <li>Contact us</li>
+                        <li class="sora-font font-light hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white">Find a pet</li>
+                        <li class="sora-font font-light hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white">Breeds</li>
+                        <li class="sora-font font-light hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white">Contact us</li>
                     </ol>
                 </div>
                 <div class="flex justify-between items-center gap-3">
-                    <i class="fa-regular fa-bell"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <button class="bg-white border border-yellow-400 rounded-xl px-4 py-2 text-sm">Login</button>
-                    <button class="bg-[#FFDC26] rounded-md px-6 py-2 ">2</button>
+                    <i class="fa-regular fa-bell ml-4 hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white"></i>
+                    <i class="fa-solid fa-magnifying-glass hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white"></i>
+                    <button class="bg-white border border-yellow-400 rounded-xl px-4 py-2 text-sm font-light sora-font hover:bg-[#458aeb] hover:px-4 hover:py-2 hover:rounded-lg hover:text-white">Login</button>
+                    <button class="bg-[#FFDC26] rounded-md px-6 py-2 hover:bg-[#458aeb] hover:px-8 hover:py-2 hover:rounded-lg hover:text-white">Z</button>
 
                 </div>
 
@@ -95,11 +110,11 @@
                     <h1 class=" mb-4 adlam-font font-normal  text-xl md:text-7xl">Pamper Your Pet, <br> Because They
                         Deserve <br> the Bes
                     </h1>
-                    <p class="mb-4 space-y-4 text-gray-500">Discover a world of treats, toys, and essentials handpicked
+                    <p class="mb-4 space-y-4 text-gray-500 sora-font">Discover a world of treats, toys, and essentials handpicked
                         for <br> your furry
                         friends. Shop now and make tails wag with
                         joy!</p>
-                    <button class="bg-[#FFDC26] rounded-md px-6 py-2 ">Find a pet</button>
+                    <button class="bg-[#FFDC26] sora-font rounded-md px-6 py-2 hover:bg-[#458aeb] hover:px-8 hover:py-2 hover:rounded-lg hover:text-white">Find a pet</button>
                 </div>
 
 
@@ -111,29 +126,36 @@
 
     </header>
 
+
     <!-- main section start -->
     <main>
+        <h1 class="text-3xl adlam-font text-center mt-4">Animation</h1>
+
+        <div class="flex items-center justify-center">
+            <img src="extraimage/walk-cat.png" alt="Walking Cat" class="w-32 animate-walk">
+        </div>
+
         <div class="container mx-auto mt-24 px-4">
             <h1 class="adlam-font text-4xl mb-12">Browse By Categories</h1>
             <div class="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 ga[-4 md:gap-6] ">
-                <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64">
+                <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                     <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                             src="images/dog-cartoon.png" alt=""></div>
                     <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                         <h3 class="adlam-font text-xl md:text-sm">dog</h3>
-                        <p class="sora-font">3 iteams</p>
+                        <p class="sora-font text-gray-500">3 iteams</p>
 
                     </div>
 
 
                 </div>
                 <div>
-                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64">
+                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                         <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                                 src="images/fish-cartoon.png" alt=""></div>
                         <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                             <h3 class="adlam-font  text-xl md:text-sm ">Fish</h3>
-                            <p class="sora-font">3 iteams</p>
+                            <p class="sora-font text-gray-500">3 iteams</p>
 
                         </div>
 
@@ -142,12 +164,12 @@
                 </div>
 
                 <div>
-                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64">
+                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                         <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                                 src="images/cat-cartoon.png" alt=""></div>
                         <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                             <h3 class="adlam-font  text-xl md:text-sm">Cat</h3>
-                            <p class="sora-font">3 iteams</p>
+                            <p class="sora-font text-gray-500">3 iteams</p>
 
                         </div>
 
@@ -156,12 +178,12 @@
                 </div>
 
                 <div>
-                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64">
+                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                         <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                                 src="images/bird-cartoon.png" alt=""></div>
                         <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                             <h3 class="adlam-font  text-xl md:text-sm">Birds</h3>
-                            <p class="sora-font">3 iteams</p>
+                            <p class="sora-font text-gray-500">3 iteams</p>
 
                         </div>
 
@@ -170,12 +192,12 @@
                 </div>
 
                 <div>
-                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64">
+                    <div class="bg-[#F9DF8A]  p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                         <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                                 src="images/mouse-cartoon.png" alt=""></div>
                         <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                             <h3 class="adlam-font  text-xl md:text-sm">Small Pet</h3>
-                            <p class="sora-font">3 iteams</p>
+                            <p class="sora-font text-gray-500">3 iteams</p>
 
                         </div>
 
@@ -184,12 +206,12 @@
                 </div>
 
                 <div>
-                    <div class="bg-[#F9DF8A] p-8 rounded-lg h-64">
+                    <div class="bg-[#F9DF8A] p-8 rounded-lg h-64 hover:bg-[#458aeb] hover:p-12 hover:text-white">
                         <div class="flex justify-center "><img class="rounded-full p-4 bg-white h-24 w-24"
                                 src="images/rabbit-cartoon.png" alt=""></div>
                         <div class="w-2/3 text-center mx-auto mt-6 space-y-2">
                             <h3 class="adlam-font  text-xl md:text-sm">Rabit</h3>
-                            <p class="sora-font">3 iteams</p>
+                            <p class="sora-font text-gray-500">3 iteams</p>
 
                         </div>
 
@@ -218,13 +240,13 @@
                             <p class="text-sm text-gray-400 pb-6 md:pb-8 sora-font">Discover a world of treats, toys,
                                 and <br>
                                 essentials handpicked for</p>
-                            <button class="bg-white rounded-lg px-4 py-1 md:py-2 sora-font mb-4">Shop Now</button>
+                            <button class="bg-white rounded-lg px-4 py-1 md:py-2 sora-font mb-4 hover:bg-[#458aeb] hover:px-8 hover:py-2 hover:rounded-lg hover:text-white">Shop Now</button>
                         </div>
 
                     </div>
                     <div class="grid  grid-cols-2 md:grid-cols-3 w-full md:w-2/3 gap-4 mt-8 md:mt-0">
                         <!-- card start  -->
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -233,7 +255,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px] rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -243,7 +265,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -252,7 +274,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -262,7 +284,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -271,7 +293,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -281,7 +303,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -289,7 +311,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -299,7 +321,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -307,7 +329,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -317,7 +339,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -326,7 +348,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -336,7 +358,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -345,7 +367,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -356,7 +378,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -364,7 +386,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -374,7 +396,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -383,7 +405,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -393,7 +415,7 @@
 
                         </div>
 
-                        <div class="bg-[#FFFFFF] shadow-lg md:hidden p-4 pr-8 rounded-lg">
+                        <div class="bg-[#FFFFFF] shadow-lg md:hidden p-4 pr-8 rounded-lg hover:bg-[#458aeb]">
                             <div class="flex items-center gap-x-4">
                                 <div class="bg-[#fdf9f6]  w-[86px] h-[86px] flex items-center rounded-xl">
 
@@ -401,7 +423,7 @@
 
 
                                 </div>
-                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]">
+                                <div class="bg-[#FFFFFF] w-[86px] h-[86px]  rounded-lg p-4">
                                     <p><span><i class="fa-solid fa-star text-[#F9DF8A]"></i></span> 4.5</p>
                                     <h4>Pet Bed</h4>
                                     <p>$39.99</p>
@@ -473,33 +495,33 @@
                 <div class="md:flex items-center justify-center gap-4  ">
                     <div class="text-center shadow-lg rounded-md bg-white p-4  mb-8 md:mb-0">
                         <img class="w-1/2 mx-auto md:w-full rounded-full" src="extraimage/cat1.jpeg" alt="">
-                        <h3 class="text-2xl pt-4 ">Cat One</h3>
-                        <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4">Add </button>
+                        <h3 class="text-2xl pt-4 sora-font ">Cat One</h3>
+                        <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20 hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                     </div>
                     <div class="text-center shadow-lg rounded-md bg-white px-8 md:px-0 p-4 mb-8 md:mb-0">
                         <img class="  rounded-full w-1/2 mx-auto md:w-full" src="extraimage/cat2.jpeg" alt="">
-                        <h3 class="text-2xl pt-4 ">Cat Two</h3>
-                        <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4">Add </button>
+                        <h3 class="text-2xl pt-4 sora-font ">Cat Two</h3>
+                        <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20  hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                     </div>
                 <div class="text-center shadow-lg rounded-md bg-white p-4 mb-8 md:mb-0">
                     <img class="w-1/2 mx-auto md:w-full rounded-full" src="extraimage/cat1.jpeg" alt="">
-                    <h3 class="text-2xl pt-4 ">Cat Three</h3>
-                    <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4">Add </button>
+                    <h3 class="text-2xl pt-4 sora-font ">Cat Three</h3>
+                    <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20  hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                 </div>
                 <div class="text-center shadow-lg rounded-md  bg-white p-4 mb-8 md:mb-0">
                     <img class="w-1/2 mx-auto md:w-full rounded-full" src="extraimage/cat2.jpeg" alt="">
-                    <h3 class="text-2xl pt-4 ">Cat Four</h3>
-                    <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4 ">Add </button>
+                    <h3 class="text-2xl pt-4 sora-font ">Cat Four</h3>
+                    <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20 hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                 </div>
                     <div class="text-center shadow-lg rounded-md bg-white p-4 mb-8 md:mb-0">
                         <img class="w-1/2 mx-auto md:w-full rounded-full" src="extraimage/cat1.jpeg" alt="">
-                        <h3 class="text-2xl pt-4 ">Cat Five</h3>
-                        <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4">Add </button>
+                        <h3 class="text-2xl pt-4 sora-font ">Cat Five</h3>
+                        <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20  hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                     </div>
                 <div class="text-center shadow-lg rounded-md bg-white p-4 mb-8 md:mb-0">
                     <img class="w-1/2 mx-auto md:w-full rounded-full" src="extraimage/cat2.jpeg" alt="">
-                    <h3 class="text-2xl pt-4 ">Cat Six</h3>
-                    <button class="bg-yellow-400 py-2 px-12 rounded-lg my-4">Add </button>
+                    <h3 class="text-2xl pt-4 sora-font ">Cat Six</h3>
+                    <button class="bg-yellow-400 py-2 px-16 rounded-lg my-4 hover:bg-[#458aeb] hover:px-20  hover:py-2 hover:rounded-lg hover:text-white">Add </button>
                 </div>
                 
                 </div>
@@ -523,11 +545,11 @@
                         <img class="w-full h-full p-8" src="images/cute-pet-mid.png" alt="">
                     </div>
                     <div class="w-2/3 pl-8">
-                        <h1 class="mt-8">Get Pawsome News!</h1>
-                        <p class="mt-4 mb-4">Exclusive training tips, ticks, product deals and more.</p>
-                        <input class="w-3/5 px-8 py-2 rounded-lg" type="text" placeholder="Enter Your email">
+                        <h1 class="mt-8 text-3xl adlam-font">Get Pawsome News!</h1>
+                        <p class="mt-4 mb-4 sora-font text-gray-500 text-sm">Exclusive training tips, ticks, product deals and more.</p>
+                        <input class="w-3/5 px-8 py-2 rounded-lg text-sm text-gray-500 sora-font" type="text" placeholder="Enter Your email">
                         <br>
-                        <button class="bg-yellow-400 py-2 px-12 rounded-lg mt-4">Subscribe</button>
+                        <button class="bg-yellow-400 sora-font py-2 px-16 rounded-lg mt-4 hover:bg-[#458aeb] hover:px-24 hover:py-2 hover:rounded-lg hover:text-white">Subscribe</button>
 
 
                     </div>
@@ -544,7 +566,7 @@
                 <!-- footer Div1 -->
                 <div>
                     <div class="flex items-center gap-4 pb-4">
-                        <div><img class="text-black" src="images/logo-header.png" alt=""></div>
+                        <div><img class="text-black" src="images/logo-footer.png" alt=""></div>
 
                         <h1 class="sora-font text-lg font-medium">Browse Pets</h1>
 
@@ -559,19 +581,23 @@
 
                 <div class="pb-12">
                     <ol class="space-y-4">
-                        <li>Find a pet</li>
-                        <li>Breeds</li>
-                        <li>Contact us</li>
+                        <li class="adlam-font text-lg">Find a pet</li>
+                        <li class="adlam-font text-lg">Breeds</li>
+                        <li class="adlam-font text-lg">Contact us</li>
                     </ol>
                 </div>
 
                 <!-- Footer div-2 -->
                 <div class="pb-12 space-y-1">
-                    <h3>Follow us</h3>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                    <h3 class="adlam-font text-lg">Follow us</h3>
+                    <div class="space-x-3">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </div>
+                  
                 </div>
 
             </div>
